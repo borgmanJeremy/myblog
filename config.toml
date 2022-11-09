@@ -1,0 +1,15 @@
+baseurl = "/"
+title = "My blog"
+theme = "ghostwriter"
+
+[Params]
+    mainSections = ["post"]
+    intro = true
+    headline = "Stuff I Learned"
+    description = "I will use this blog to document things I've learned"
+    github = "https://github.com/borgmanJeremy"
+    opengraph = true
+    dateFormat = "Mon, Jan 2, 2006"
+
+[Permalinks]
+    post = "/:filename/"
