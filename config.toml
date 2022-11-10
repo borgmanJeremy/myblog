@@ -1,6 +1,11 @@
 baseurl = "/"
-title = "My blog"
+title = "Stuff I Learned Today"
 theme = "ghostwriter"
+copyright = "2022 Jeremy Borgman All rights reserved"
+
+[author]
+    name = "Jeremy Borgman"
+    email = "borgman.jeremy@pm.me"
 
 [Params]
     mainSections = ["post"]
@@ -8,6 +13,7 @@ theme = "ghostwriter"
     headline = "Stuff I Learned"
     description = "I will use this blog to document things I've learned"
     github = "https://github.com/borgmanJeremy"
+    rss = true
     opengraph = true
     dateFormat = "Mon, Jan 2, 2006"
 
