@@ -1,6 +1,6 @@
 baseurl: "https://example.com/"
 title: Ghostwriter example
-theme: ghostwriter
+theme: github.com/jbub/ghostwriter
 languageCode: en-us
 copyright: My Name
 disqusShortname: XXX
@@ -84,3 +84,7 @@ menu:
     - name: About
       url: /page/about/
       weight: 4
+
+module:
+  imports:
+  - path: github.com/jbub/ghostwriter

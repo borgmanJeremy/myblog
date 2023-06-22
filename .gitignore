@@ -1,0 +1,5 @@
+*.dkp
+*.bkp
+*.dtmp
+themes/ghostwriter/.github/
+themes/ghostwriter/exampleSite/
