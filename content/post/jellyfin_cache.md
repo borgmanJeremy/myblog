@@ -91,7 +91,7 @@ Configures the time to sleep before restarting a service (as configured with Res
  If set to on-failure, the service will be restarted when the process exits with a non-zero exit code, is terminated by a signal (including on core dump, but excluding the aforementioned four signals), when an operation (such as service reload) times out, and when the configured watchdog timeout is triggered. If set to on-abnormal, the service will be restarted when the process is terminated by a signal (including on core dump, excluding the aforementioned four signals), when an operation times out, or when the watchdog timeout is triggered. If set to on-abort, the service will be restarted only if the service process exits due to an uncaught signal not specified as a clean exit status. If set to on-watchdog, the service will be restarted only if the watchdog timeout for the service expires. **If set to always, the service will be restarted regardless of whether it exited cleanly or not, got terminated abnormally by a signal, or hit a timeout.**
 ***
 
-Oops....This means that the systemd service is always going to start 30 seconds after it sucessfully finishes.
+Oops....This means that the systemd service is always going to start 30 seconds after it successfully finishes.
 
 ## Jellyfin Caching
 This explains why there is constant bandwidth between the main server and the remote. However it does not explain why there is a large spike in bandwidth when Jellyfin is transcoding. Now that we know the bandwidth was generally related to the constant offloading, we know we can basically look for why Jellyfin has high write IO to disk during transcoding. 
