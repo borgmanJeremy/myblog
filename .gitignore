@@ -3,3 +3,4 @@
 *.dtmp
 themes/ghostwriter/.github/
 themes/ghostwriter/exampleSite/
+.direnv/
