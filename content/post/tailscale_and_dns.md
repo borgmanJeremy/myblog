@@ -2,12 +2,12 @@
 title = "Tailscale, DNS, and Self Hosted Services"
 date = 2022-11-08
 author = "Jeremy Borgman"
-tags = ['Tailscale', 'DNS']
+tags = ['Tailscale', 'DNS', 'pihole', 'adguard']
 +++
 
 ## Introduction
 This post walks through how to set up DNS on tailscale so it places nicely with
-self hosted services. It assumes you are running AdGuard but a similar solution
+self hosted services. It assumes you are running AdGuard or PiHole but a similar solution
 should be available for any DNS service.
 
 I recently deployed tailscale on my network and its been working well. I
@@ -45,5 +45,15 @@ tailscale, enable DNS rewrites in adguard.
 ![DNS Rewrite Menu](/post/tailscale_and_dns/rewrite.png)
 
 ![DNS Rewrite](/post/tailscale_and_dns/new_ip.png)
+
+
+## DNS Rewrites in PiHole
+To set up DNS rewrites in pihole create the file:
+/etc/dnsmasq.d/02-my-wildcard-dns.conf
+
+The contents of the file should look like:
+```
+address=/example.com/192.168.1.47
+```
 
 
