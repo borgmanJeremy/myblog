@@ -39,7 +39,7 @@ dtoverlay=disable-wifi
 
 ![config.txt](/post/octopi_external_wifi/boottxt.png)
 
-Once the device boots for the first time you can see that there is only one network interface. If you unplug the external adaptor it goes away. 
+Once the device boots for the first time you can see that there is only one wireless network interface. If you unplug the external adaptor it goes away. 
 
 ```
 octopi@octopi:~$ iwconfig
@@ -58,7 +58,7 @@ wlan0     unassociated  ESSID:""  Nickname:"<WIFI@REALTEK>"
 ```
 
 ## Predictable Interface Name
-Next I used raspi-config to enabled persistent naming. This is not strictly required but makes things much easier to reason about. 
+Next I used raspi-config to enabled persistent naming. This is not strictly required but makes things much easier to reason about. This will especially help if the onboard wifi chip is still enabled.
 
 ```
 sudo raspi-config
@@ -143,9 +143,10 @@ Then bring the interface up, remembering to change the adaptor name if needed:
 sudo ifup wlx08beac1562ff
 ```
 
-Now if you navigate to the ipv4 address you will see octopi:
-
-
+Now if you navigate to the ipv4 address you will see octopi. Reminder you can find the ipv4 address by running
+```
+ip -c a
+```
 
 ## References
 
