@@ -56,4 +56,16 @@ The contents of the file should look like:
 address=/example.com/192.168.1.47
 ```
 
+### Update 2025/02/24
+If you upgrade from pihole v5 to pihole v6 this needs to be re-enabled in /etc/pihole/pihole.toml.
+
+```
+...
+[misc]
+  # Should FTL load additional dnsmasq configuration files from /etc/dnsmasq.d/?
+  etc_dnsmasq_d = true ### CHANGED, default = false
+...
+```
+
+It's also possible (but I've not tested) to remove the file from /etc/dnsmasq/d, and append the contents to dnsmasq_lines = [] in the pihole.toml file.
 
