@@ -30,7 +30,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.144.2
+      HUGO_VERSION: 0.144.2 # note for cloudflare this needs to be independently set on the cloudflare dashboard
     steps:
       - name: Install Hugo CLI
         run: |
