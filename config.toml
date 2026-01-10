@@ -12,8 +12,7 @@ copyright = "2022 Jeremy Borgman All rights reserved"
     github = "https://github.com/borgmanJeremy"
     rss = true
     opengraph = true
-    disqusShortname = ""
     dateFormat = "Mon, Jan 2, 2006"
 
 [Permalinks]
-    post = "/:filename/"
+    post = "/:contentbasename/"
